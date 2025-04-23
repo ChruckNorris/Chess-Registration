@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Club Registration</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 10;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .section-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .section-box {
+            border: 3px solid #d4af37;
+            border-radius: 5px;
+            padding: 20px 40px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .section-box:hover {
+            background-color: rgba(212, 175, 55, 0.2);
+            transform: scale(1.05);
+        }
+
+        /* Chess pieces floating animation */
+        .chess-piece {
+            position: absolute;
+            opacity: 0.1;
+            z-index: 1;
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-100px) rotate(180deg); }
+            100% { transform: translateY(0) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating chess pieces (added via JavaScript) -->
+    
+    <div class="container">
+        <h1>What section do you want to register for?</h1>
+        <div class="section-options">
+            <div class="section-box">Elite Section</div>
+            <div class="section-box">Advance Section</div>
+            <div class="section-box">Ladies Section</div>
+            <div class="section-box">Junior Section</div>
+        </div>
+    </div>
+
+    <script>
+        // Add floating chess pieces
+        const pieces = ['♔', '♕', '♖', '♗', '♘', '♙', '♚', '♛', '♜', '♝', '♞', '♟'];
+        const colors = ['#d4af37', '#ffffff', '#c0c0c0'];
+        
+        for (let i = 0; i < 20; i++) {
+            const piece = document.createElement('div');
+            piece.className = 'chess-piece';
+            piece.textContent = pieces[Math.floor(Math.random() * pieces.length)];
+            piece.style.color = colors[Math.floor(Math.random() * colors.length)];
+            piece.style.fontSize = `${Math.random() * 30 + 20}px`;
+            piece.style.left = `${Math.random() * 100}vw`;
+            piece.style.top = `${Math.random() * 100}vh`;
+            piece.style.animationDuration = `${Math.random() * 20 + 10}s`;
+            piece.style.animationDelay = `${Math.random() * 5}s`;
+            document.body.appendChild(piece);
+        }
+    </script>
+</body>
+</html>
