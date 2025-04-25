@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chess Club Registration</title>
+    <title>PR Booyse Chess Tournament Registration</title>
     <style>
         body {
             background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
@@ -21,11 +21,29 @@
         .container {
             text-align: center;
             z-index: 10;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        /* TOURNAMENT HEADER STYLES */
+        .tournament-title {
+            font-size: 2.8em;
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+
+        .tournament-date {
+            font-size: 1.2em;
+            color: #d4af37;
+            margin: 0 0 30px 0;
+            opacity: 0.9;
         }
 
         h1 {
             margin-bottom: 30px;
-            font-size: 2.5em;
+            font-size: 2em;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         }
 
@@ -36,12 +54,6 @@
             gap: 20px;
         }
 
-.section-options a {
-  text-decoration: none; /* Removes underline */
-  color: white;         /* Text color */
-  display: block;       /* Ensures padding works */
-}
-        
         .section-box {
             border: 3px solid #d4af37;
             border-radius: 5px;
@@ -50,6 +62,9 @@
             cursor: pointer;
             transition: all 0.3s ease;
             background-color: rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            color: white;
+            display: inline-block;
         }
 
         .section-box:hover {
@@ -75,14 +90,18 @@
 <body>
     <!-- Floating chess pieces (added via JavaScript) -->
     
-<div class="container">
-    <h1>SELECT YOUR SECTION</h1> 
-    <div class="section-options">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2N-51UevNwOIAVuzkPtX-VjlXW6uF3STtudRnFWWIsAtDuw/viewform?usp=header" class="section-box" target="_blank">Elite Section</a>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLScUtStOiC7HYr_U7q9Rrr-lN9gsnruMsg-TLN6TleKdwztBUg/viewform?usp=header" class="section-box" target="_blank">Advance Section</a>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSezGEyWnEkW9qp9XbQcB-lGlkmBzgUBcJCM0CvEGkcOkCTPgQ/viewform?usp=header" class="section-box" target="_blank">Ladies Section</a>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLScdbSNh7Xxk2Xgzut1qCbeW5qpDIURTHwEPsRl0l0ph0WpYJA/viewform?usp=header" class="section-box" target="_blank">Junior Section</a>
-</div>
+    <div class="container">
+        <h1 class="tournament-title">PR BOOYSE ANNUAL STANDARD CHESS TOURNAMENT</h1>
+        <p class="tournament-date">01 November 2025</p>
+        
+        <h1>SELECT YOUR SECTION</h1>
+        <div class="section-options">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2N-51UevNwOIAVuzkPtX-VjlXW6uF3STtudRnFWWIsAtDuw/viewform?usp=header" class="section-box" target="_blank">Elite Section</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScUtStOiC7HYr_U7q9Rrr-lN9gsnruMsg-TLN6TleKdwztBUg/viewform?usp=header" class="section-box" target="_blank">Advance Section</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSezGEyWnEkW9qp9XbQcB-lGlkmBzgUBcJCM0CvEGkcOkCTPgQ/viewform?usp=header" class="section-box" target="_blank">Ladies Section</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScdbSNh7Xxk2Xgzut1qCbeW5qpDIURTHwEPsRl0l0ph0WpYJA/viewform?usp=header" class="section-box" target="_blank">Junior Section</a>
+        </div>
+    </div>
 
     <script>
         // Add floating chess pieces
